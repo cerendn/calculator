@@ -20,7 +20,9 @@ keys.addEventListener('click', function (e) {
     }
 
     if (element.classList.contains('decimal')) {
-        console.log('decimal', element.value);
+        
+        inputDecimal(element.value);
+        updateValue();
         return;
     }
 
@@ -30,11 +32,17 @@ keys.addEventListener('click', function (e) {
     }
 
 
-    console.log('number', element.value);
+    //console.log('number', element.value);
     inputNumber(element.value);
     updateValue();
 });
 
 function inputNumber(num) {
 displayValue = display === '0' ? num: displayValue + num;
+}
+
+function inputDecimal() {
+    if(!displayValue.includes('.')) {
+        displayValue += '.';
+    }
 }
