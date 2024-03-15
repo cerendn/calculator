@@ -1,24 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 10px;
 }
-body{
+
+body {
     font-size: 1.2rem;
 }
-.calculator{
+
+.calculator {
     border: 1px solid rgb(234, 214, 252);
     border-radius: 5px;
     width: 400px;
     position: absolute;
     top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.calculator-input{
+
+.calculator-input {
     width: 100%;
     font-size: 4rem;
     height: 70px;
@@ -29,32 +33,42 @@ body{
     padding-left: 20px;
     padding-right: 20px;
 }
-button{
+
+button {
     height: 50px;
     background-color: rgb(132, 0, 255);
     border-radius: 3px;
     border: 1px solid rgb(234, 214, 252);
-    font-size: 2.5rem ;
+    font-size: 2.5rem;
     color: antiquewhite;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(230, 0, 255);
 }
-.operator{
-    color:rgb(235, 217, 194);
+
+.operator {
+    color: rgb(235, 217, 194);
     background-color: rgb(217, 0, 255);
 }
 
-.operator:hover{
+.equal-sign {
+    grid-area:2/4/6/5 ;
+    height: 100%;
+}
+
+.operator:hover {
     background-color: aquamarine;
 }
-.clear:hover{
+
+.clear:hover {
     background-color: rgb(111, 238, 238);
-    
+
 }
-.calculator-keys{
+
+.calculator-keys {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     padding: 20px;
 }
