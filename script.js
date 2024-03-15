@@ -27,10 +27,11 @@ keys.addEventListener('click', function (e) {
     }
 
     if (element.classList.contains('clear')) {
-        console.log('clear', element.value);
+        //console.log('clear', element.value);
+        clear();
+        updateValue();
         return;
     }
-
 
     //console.log('number', element.value);
     inputNumber(element.value);
@@ -38,11 +39,15 @@ keys.addEventListener('click', function (e) {
 });
 
 function inputNumber(num) {
-displayValue = display === '0' ? num: displayValue + num;
+displayValue =  displayValue === '0' ? num: displayValue + num;
 }
 
 function inputDecimal() {
     if(!displayValue.includes('.')) {
         displayValue += '.';
     }
+}
+
+function clear() {
+    displayValue = '0';
 }
